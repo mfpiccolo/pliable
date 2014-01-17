@@ -1,1 +1,0 @@
-require 'ply/version'

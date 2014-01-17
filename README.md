@@ -1,7 +1,7 @@
-# ply
+# pliable
 
-* [Homepage](https://rubygems.org/gems/ply)
-* [Documentation](http://rubydoc.info/gems/ply/frames)
+* [Homepage](https://rubygems.org/gems/pliable)
+* [Documentation](http://rubydoc.info/gems/pliable/frames)
 * [Email](mailto:mfpiccolo at gmail.com)
 
 ## Description
@@ -12,13 +12,13 @@ TODO: Description
 
 ## Examples
 
-    require 'ply'
+    require 'pliable'
 
 ## Requirements
 
 ## Install
 
-    $ gem install ply
+    $ gem install pliable
 
 ## Copyright
 

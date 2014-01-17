@@ -1,4 +1,4 @@
 require 'rspec'
-require 'ply/version'
+require 'pliable/version'
 
-include Ply
+include Pliable
