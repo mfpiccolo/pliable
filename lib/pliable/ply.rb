@@ -77,6 +77,7 @@ module Pliable
       end
     end
 
+    # user initializer to overwrite this method
     def scopify(name)
       TextHelper.pluralize(name.gsub('__c', '').downcase)
     end

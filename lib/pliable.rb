@@ -8,4 +8,10 @@ module Pliable
     base.send(:include, Pliable::PlyRelation)
     super
   end
+
+  def self.configure
+    yield self if block_given?
+  end
+
+
 end
