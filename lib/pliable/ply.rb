@@ -14,22 +14,9 @@ module Pliable
     after_initialize :set_ply_attributes
     after_initialize :define_ply_scopes
 
-
-
     def self.oldest_last_checked_time
       order('last_checked').first.last_checked
     end
-
-    # TODO This is so each model in the app can scope to a name passed in through
-    # ply name but it is breaking the children and parent relationships
-
-    # def self.all
-    #   if self.try(:ply_type)
-    #     super.where(otype: self.try(:ply_type))
-    #   else
-    #     super
-    #   end
-    # end
 
     def self.all
       if current_scope
