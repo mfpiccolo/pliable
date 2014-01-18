@@ -42,13 +42,6 @@ module Pliable
       end
     end
 
-    # TODO write #children and #parents methods and #self.children and self.parents
-    # these will just return an array of each
-
-    # def children
-    #   Ply.where()
-    # end
-
     def to_param
       oid
     end
