@@ -6,34 +6,61 @@ module Pliable
 
     # Allows an ply to associate another ply as either a parent or child
     has_many :ply_relations
-    has_many :parent_relations, class_name: 'PlyRelation', foreign_key: 'child_id'
+    has_many :parent_relations, class_name: "PlyRelation", foreign_key: "child_id"
     has_many :parents, through: :parent_relations, source: :parent
-    has_many :child_relations, class_name: 'PlyRelation', foreign_key: 'parent_id'
+    has_many :child_relations, class_name: "PlyRelation", foreign_key: "parent_id"
     has_many :children, through: :child_relations, source: :child
 
     after_initialize :set_ply_attributes
     after_initialize :define_ply_scopes
 
+
+
     def self.oldest_last_checked_time
       order('last_checked').first.last_checked
     end
 
+    # TODO This is so each model in the app can scope to a name passed in through
+    # ply name but it is breaking the children and parent relationships
+
+    # def self.all
+    #   if self.try(:ply_type)
+    #     super.where(otype: self.try(:ply_type))
+    #   else
+    #     super
+    #   end
+    # end
+
     def self.all
-      if self.try(:type).present?
-        super.where(otype: self.try(:type))
+      if current_scope
+        current_scope.clone
       else
-        super
+        if self.name == "Pliable::Ply"
+          scope = relation
+        else
+          if self.try(:ply_type)
+            scope = relation.where(otype: self.try(:ply_type))
+          else
+            scope = relation
+          end
+        end
+        scope.default_scoped = true
+        scope
       end
     end
 
     def self.ply_name(name)
       self.class.instance_eval do
-        define_method(:type) { name }
+        define_method(:ply_type) { name }
       end
     end
 
     # TODO write #children and #parents methods and #self.children and self.parents
     # these will just return an array of each
+
+    # def children
+    #   Ply.where()
+    # end
 
     def to_param
       oid
