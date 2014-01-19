@@ -65,21 +65,25 @@ module Pliable
     def define_ply_scopes
       # pluralize is not perfect.  ie. Merchandise__c => merchandises
       children.pluck(:child_type).uniq.each do |name|
-        define_singleton_method(scopify(name)) do
+        define_singleton_method(scrub_for_scope(name)) do
           children.where(otype: name)
         end
       end
 
       parents.pluck(:parent_type).uniq.each do |name|
-        define_singleton_method(scopify(name)) do
+        define_singleton_method(scrub_for_scope(name)) do
           parents.where(otype: name)
         end
       end
     end
 
     # user initializer to overwrite this method
-    def scopify(name)
-      TextHelper.pluralize(name.gsub('__c', '').downcase)
+    def scrub_for_scope(name)
+      if respond_to? :added_scrubber
+        name = added_scrubber(name)
+      end
+
+      TextHelper.pluralize(name.downcase)
     end
   end # Ply
 end # Pliable
