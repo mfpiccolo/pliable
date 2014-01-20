@@ -19,10 +19,16 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "rails",  ">= 4.0"
 
-  gem.add_development_dependency "rails",  ">= 4.0"
   gem.add_development_dependency 'bundler', '~> 1.0'
   gem.add_development_dependency 'rake', '~> 0.8'
   gem.add_development_dependency 'minitest'
+  gem.add_development_dependency 'mocha'
+  gem.add_development_dependency 'pry'
+  gem.add_development_dependency 'pry-debugger'
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
   gem.add_development_dependency 'yard', '~> 0.8'
+
+  gem.add_development_dependency "rails",  ">= 4.0"
+  gem.add_development_dependency "pg"
+  gem.add_development_dependency "activerecord-nulldb-adapter"
 end

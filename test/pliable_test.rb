@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'helper'
 require 'pliable'
 
 describe Pliable do
   it "should have a VERSION constant" do
-    subject.const_get('VERSION').should_not be_empty
+    Pliable.const_get('VERSION').wont_be_nil
   end
 end

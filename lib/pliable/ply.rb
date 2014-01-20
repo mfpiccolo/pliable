@@ -2,6 +2,7 @@ require 'active_record'
 
 module Pliable
   class Ply < ActiveRecord::Base
+    # TODO move to Dummy
     belongs_to :user
 
     # Allows an ply to associate another ply as either a parent or child

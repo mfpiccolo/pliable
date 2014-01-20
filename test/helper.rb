@@ -1,5 +1,3 @@
-include Pliable
-
 begin
   require "bundler"
 rescue LoadError => e
@@ -16,6 +14,7 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
+require "active_record"
 require "minitest/autorun"
 require "pliable"
 require "mocha/setup"
