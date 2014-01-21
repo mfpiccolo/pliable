@@ -1,0 +1,2135 @@
+Dolcetto0:
+ id: 1
+ grape_id: NULL
+ name: Dolcetto
+
+Freisamer0:
+ id: 2
+ grape_id: NULL
+ name: Freisamer
+
+Chardonnay0:
+ id: 3
+ grape_id: NULL
+ name: Chardonnay
+
+Barbarossa0:
+ id: 4
+ grape_id: NULL
+ name: Barbarossa
+
+Kékfrankos 1:
+ id: 5
+ grape_id: 69
+ name: Kékfrankos 
+
+Leànyka1:
+ id: 6
+ grape_id: 308
+ name: Leànyka
+
+Muscat Ottonel1:
+ id: 7
+ grape_id: 322
+ name: Muscat Ottonel
+
+Grk0:
+ id: 8
+ grape_id: NULL
+ name: Grk
+
+Nuragus0:
+ id: 9
+ grape_id: NULL
+ name: Nuragus
+
+Riesling 0:
+ id: 10
+ grape_id: NULL
+ name: Riesling 
+
+Viura 0:
+ id: 11
+ grape_id: NULL
+ name: Viura 
+
+Monbadon1:
+ id: 12
+ grape_id: 227
+ name: Monbadon
+
+Favorita0:
+ id: 13
+ grape_id: NULL
+ name: Favorita
+
+Tamîioasa0:
+ id: 14
+ grape_id: NULL
+ name: Tamîioasa
+
+Emir Karasi0:
+ id: 15
+ grape_id: NULL
+ name: Emir Karasi
+
+Zeusz0:
+ id: 16
+ grape_id: NULL
+ name: Zeusz
+
+Vernaccia0:
+ id: 17
+ grape_id: NULL
+ name: Vernaccia
+
+Alarije0:
+ id: 18
+ grape_id: NULL
+ name: Alarije
+
+Alicante Bouschet0:
+ id: 19
+ grape_id: NULL
+ name: Alicante Bouschet
+
+Schwarzriesling 1:
+ id: 20
+ grape_id: 211
+ name: Schwarzriesling 
+
+Viura1:
+ id: 21
+ grape_id: 257
+ name: Viura
+
+Guarnaccia Bianca0:
+ id: 22
+ grape_id: NULL
+ name: Guarnaccia Bianca
+
+Ondenc0:
+ id: 23
+ grape_id: NULL
+ name: Ondenc
+
+Corvina0:
+ id: 24
+ grape_id: NULL
+ name: Corvina
+
+Fiano0:
+ id: 25
+ grape_id: NULL
+ name: Fiano
+
+Touriga Nacional 0:
+ id: 26
+ grape_id: NULL
+ name: Touriga Nacional 
+
+Pinot Noir 0:
+ id: 27
+ grape_id: NULL
+ name: Pinot Noir 
+
+Graciano0:
+ id: 28
+ grape_id: NULL
+ name: Graciano
+
+Neuburger0:
+ id: 29
+ grape_id: NULL
+ name: Neuburger
+
+Cencibel 1:
+ id: 30
+ grape_id: 340
+ name: Cencibel 
+
+Gros Plant 1:
+ id: 31
+ grape_id: 345
+ name: Gros Plant 
+
+Blauer Wildbacher1:
+ id: 32
+ grape_id: 215
+ name: Blauer Wildbacher
+
+Băbească Neagră0:
+ id: 33
+ grape_id: NULL
+ name: Băbească Neagră
+
+Criolla Grande0:
+ id: 34
+ grape_id: NULL
+ name: Criolla Grande
+
+Hondarribi Zuri0:
+ id: 35
+ grape_id: NULL
+ name: Hondarribi Zuri
+
+Bovale Sardo0:
+ id: 36
+ grape_id: NULL
+ name: Bovale Sardo
+
+Savagnin Blanc1:
+ id: 37
+ grape_id: 420
+ name: Savagnin Blanc
+
+Ferral0:
+ id: 38
+ grape_id: NULL
+ name: Ferral
+
+Terret Noir0:
+ id: 39
+ grape_id: NULL
+ name: Terret Noir
+
+Mourvèdre 0:
+ id: 40
+ grape_id: NULL
+ name: Mourvèdre 
+
+Refosco 0:
+ id: 41
+ grape_id: NULL
+ name: Refosco 
+
+Gropello0:
+ id: 42
+ grape_id: NULL
+ name: Gropello
+
+Mazuelo1:
+ id: 43
+ grape_id: 362
+ name: Mazuelo
+
+Muscadet de Bourgogne 0:
+ id: 44
+ grape_id: NULL
+ name: Muscadet de Bourgogne 
+
+Blatina0:
+ id: 45
+ grape_id: NULL
+ name: Blatina
+
+Canaiolo0:
+ id: 46
+ grape_id: NULL
+ name: Canaiolo
+
+Muscadet de Bourgogne1:
+ id: 47
+ grape_id: 228
+ name: Muscadet de Bourgogne
+
+Ugni Blanc1:
+ id: 48
+ grape_id: 126
+ name: Ugni Blanc
+
+Ull de Llebre 1:
+ id: 49
+ grape_id: 340
+ name: Ull de Llebre 
+
+Xynomavro0:
+ id: 50
+ grape_id: NULL
+ name: Xynomavro
+
+Gouveio 1:
+ id: 51
+ grape_id: 201
+ name: Gouveio 
+
+Assyrtiko0:
+ id: 52
+ grape_id: NULL
+ name: Assyrtiko
+
+Weissburgunder1:
+ id: 53
+ grape_id: 88
+ name: Weissburgunder
+
+Palomino Fino1:
+ id: 54
+ grape_id: 150
+ name: Palomino Fino
+
+Drupeggio0:
+ id: 55
+ grape_id: NULL
+ name: Drupeggio
+
+Xarel·lo 0:
+ id: 56
+ grape_id: NULL
+ name: Xarel·lo 
+
+Rufete 0:
+ id: 57
+ grape_id: NULL
+ name: Rufete 
+
+Grüner Veltliner0:
+ id: 58
+ grape_id: NULL
+ name: Grüner Veltliner
+
+Bondola0:
+ id: 59
+ grape_id: NULL
+ name: Bondola
+
+Trajadura1:
+ id: 60
+ grape_id: 229
+ name: Trajadura
+
+Spätrot 0:
+ id: 61
+ grape_id: NULL
+ name: Spätrot 
+
+Poulsard0:
+ id: 62
+ grape_id: NULL
+ name: Poulsard
+
+Gloria0:
+ id: 63
+ grape_id: NULL
+ name: Gloria
+
+Darkenuša0:
+ id: 64
+ grape_id: NULL
+ name: Darkenuša
+
+Gaglioppo0:
+ id: 65
+ grape_id: NULL
+ name: Gaglioppo
+
+Maratheftiko0:
+ id: 66
+ grape_id: NULL
+ name: Maratheftiko
+
+Carignane 1:
+ id: 67
+ grape_id: 362
+ name: Carignane 
+
+Izsáki Sarfehér0:
+ id: 68
+ grape_id: NULL
+ name: Izsáki Sarfehér
+
+Blaufränkisch 0:
+ id: 69
+ grape_id: NULL
+ name: Blaufränkisch 
+
+Sipon1:
+ id: 70
+ grape_id: 167
+ name: Sipon
+
+Garganega Bianca0:
+ id: 71
+ grape_id: NULL
+ name: Garganega Bianca
+
+Madeleine Angevine0:
+ id: 72
+ grape_id: NULL
+ name: Madeleine Angevine
+
+Refošk1:
+ id: 73
+ grape_id: 41
+ name: Refošk
+
+Alexandrouli0:
+ id: 74
+ grape_id: NULL
+ name: Alexandrouli
+
+Septiner0:
+ id: 75
+ grape_id: NULL
+ name: Septiner
+
+Sylvaner 1:
+ id: 76
+ grape_id: 185
+ name: Sylvaner 
+
+Jacquère0:
+ id: 77
+ grape_id: NULL
+ name: Jacquère
+
+Chasselas 0:
+ id: 78
+ grape_id: NULL
+ name: Chasselas 
+
+Sultana0:
+ id: 79
+ grape_id: NULL
+ name: Sultana
+
+Rieslaner0:
+ id: 80
+ grape_id: NULL
+ name: Rieslaner
+
+Cinsault1:
+ id: 81
+ grape_id: 132
+ name: Cinsault
+
+Erbaluce0:
+ id: 82
+ grape_id: NULL
+ name: Erbaluce
+
+Falanghina0:
+ id: 83
+ grape_id: NULL
+ name: Falanghina
+
+Carignano1:
+ id: 84
+ grape_id: 362
+ name: Carignano
+
+Francusa0:
+ id: 85
+ grape_id: NULL
+ name: Francusa
+
+Muscat of Alexandria 1:
+ id: 86
+ grape_id: 322
+ name: Muscat of Alexandria 
+
+Albalonga0:
+ id: 87
+ grape_id: NULL
+ name: Albalonga
+
+Pinot Blanc 0:
+ id: 88
+ grape_id: NULL
+ name: Pinot Blanc 
+
+Mission0:
+ id: 89
+ grape_id: NULL
+ name: Mission
+
+Spätburgunder 1:
+ id: 90
+ grape_id: 27
+ name: Spätburgunder 
+
+Zweigelt 0:
+ id: 91
+ grape_id: NULL
+ name: Zweigelt 
+
+Braquet1:
+ id: 92
+ grape_id: 347
+ name: Braquet
+
+Grey Riesling1:
+ id: 93
+ grape_id: 354
+ name: Grey Riesling
+
+Dornfelder0:
+ id: 94
+ grape_id: NULL
+ name: Dornfelder
+
+Fetească Regală0:
+ id: 95
+ grape_id: NULL
+ name: Fetească Regală
+
+Millot0:
+ id: 96
+ grape_id: NULL
+ name: Millot
+
+Mandolari0:
+ id: 97
+ grape_id: NULL
+ name: Mandolari
+
+Colombard0:
+ id: 98
+ grape_id: NULL
+ name: Colombard
+
+Goldriesling0:
+ id: 99
+ grape_id: NULL
+ name: Goldriesling
+
+Petite Syrah1:
+ id: 100
+ grape_id: 115
+ name: Petite Syrah
+
+Moscato1:
+ id: 101
+ grape_id: 322
+ name: Moscato
+
+Guardavalle0:
+ id: 102
+ grape_id: NULL
+ name: Guardavalle
+
+Courbu 0:
+ id: 103
+ grape_id: NULL
+ name: Courbu 
+
+Rotberger0:
+ id: 104
+ grape_id: NULL
+ name: Rotberger
+
+Boal1:
+ id: 105
+ grape_id: 286
+ name: Boal
+
+Klingelberger1:
+ id: 106
+ grape_id: 10
+ name: Klingelberger
+
+Gamé1:
+ id: 107
+ grape_id: 69
+ name: Gamé
+
+Tinta del Pais1:
+ id: 108
+ grape_id: 340
+ name: Tinta del Pais
+
+Clare Riesling 1:
+ id: 109
+ grape_id: 151
+ name: Clare Riesling 
+
+Arvine0:
+ id: 110
+ grape_id: NULL
+ name: Arvine
+
+Verduzzo Trevigiano0:
+ id: 111
+ grape_id: NULL
+ name: Verduzzo Trevigiano
+
+Verdicchio0:
+ id: 112
+ grape_id: NULL
+ name: Verdicchio
+
+Verdiso 0:
+ id: 113
+ grape_id: NULL
+ name: Verdiso 
+
+Sereine1:
+ id: 114
+ grape_id: 390
+ name: Sereine
+
+Durif 0:
+ id: 115
+ grape_id: NULL
+ name: Durif 
+
+Syrac1:
+ id: 116
+ grape_id: 390
+ name: Syrac
+
+Muscat Blanc 1:
+ id: 117
+ grape_id: 322
+ name: Muscat Blanc 
+
+Tinta Barroca0:
+ id: 118
+ grape_id: NULL
+ name: Tinta Barroca
+
+Kadarka0:
+ id: 119
+ grape_id: NULL
+ name: Kadarka
+
+Primitivo1:
+ id: 120
+ grape_id: 411
+ name: Primitivo
+
+Piquepoult1:
+ id: 121
+ grape_id: 345
+ name: Piquepoult
+
+Hignin Noir1:
+ id: 122
+ grape_id: 390
+ name: Hignin Noir
+
+Syrah1:
+ id: 123
+ grape_id: 390
+ name: Syrah
+
+Fromenteau0:
+ id: 124
+ grape_id: NULL
+ name: Fromenteau
+
+Courtillier Musqué1:
+ id: 125
+ grape_id: 406
+ name: Courtillier Musqué
+
+Trebbiano 0:
+ id: 126
+ grape_id: NULL
+ name: Trebbiano 
+
+Johannisberg Riesling 1:
+ id: 127
+ grape_id: 10
+ name: Johannisberg Riesling 
+
+Sauvignon Gris1:
+ id: 128
+ grape_id: 413
+ name: Sauvignon Gris
+
+Alamís1:
+ id: 129
+ grape_id: 403
+ name: Alamís
+
+Tinta Carvalha 1:
+ id: 130
+ grape_id: 57
+ name: Tinta Carvalha 
+
+Entournerein1:
+ id: 131
+ grape_id: 390
+ name: Entournerein
+
+Cinsaut0:
+ id: 132
+ grape_id: NULL
+ name: Cinsaut
+
+Schiava 0:
+ id: 133
+ grape_id: NULL
+ name: Schiava 
+
+Gros Manseng 0:
+ id: 134
+ grape_id: NULL
+ name: Gros Manseng 
+
+Nielluccio0:
+ id: 135
+ grape_id: NULL
+ name: Nielluccio
+
+Carnelian0:
+ id: 136
+ grape_id: NULL
+ name: Carnelian
+
+Mavrud0:
+ id: 137
+ grape_id: NULL
+ name: Mavrud
+
+Monastrell 1:
+ id: 138
+ grape_id: 40
+ name: Monastrell 
+
+Altesse0:
+ id: 139
+ grape_id: NULL
+ name: Altesse
+
+Verduzzo Friulano0:
+ id: 140
+ grape_id: NULL
+ name: Verduzzo Friulano
+
+Pinot Grigio 0:
+ id: 141
+ grape_id: NULL
+ name: Pinot Grigio 
+
+Sangiovese 0:
+ id: 142
+ grape_id: NULL
+ name: Sangiovese 
+
+Pineau de la Loire1:
+ id: 143
+ grape_id: 301
+ name: Pineau de la Loire
+
+Malvasia di Schierano0:
+ id: 144
+ grape_id: NULL
+ name: Malvasia di Schierano
+
+Negroamaro0:
+ id: 145
+ grape_id: NULL
+ name: Negroamaro
+
+Rotburger1:
+ id: 146
+ grape_id: 91
+ name: Rotburger
+
+Moscatel de Málaga1:
+ id: 147
+ grape_id: 322
+ name: Moscatel de Málaga
+
+Mantonico Bianco0:
+ id: 148
+ grape_id: NULL
+ name: Mantonico Bianco
+
+Albana0:
+ id: 149
+ grape_id: NULL
+ name: Albana
+
+Palomino 0:
+ id: 150
+ grape_id: NULL
+ name: Palomino 
+
+Crouchen 0:
+ id: 151
+ grape_id: NULL
+ name: Crouchen 
+
+Serine1:
+ id: 152
+ grape_id: 390
+ name: Serine
+
+Balsamina1:
+ id: 153
+ grape_id: 390
+ name: Balsamina
+
+Marzemino0:
+ id: 154
+ grape_id: NULL
+ name: Marzemino
+
+Barbera0:
+ id: 155
+ grape_id: NULL
+ name: Barbera
+
+Scheurebe0:
+ id: 156
+ grape_id: NULL
+ name: Scheurebe
+
+Riesling Italico 1:
+ id: 157
+ grape_id: 226
+ name: Riesling Italico 
+
+Pinotage0:
+ id: 158
+ grape_id: NULL
+ name: Pinotage
+
+Cape Riesling1:
+ id: 159
+ grape_id: 151
+ name: Cape Riesling
+
+Malbec 0:
+ id: 160
+ grape_id: NULL
+ name: Malbec 
+
+Traminer 1:
+ id: 161
+ grape_id: 420
+ name: Traminer 
+
+Cariñena 1:
+ id: 162
+ grape_id: 362
+ name: Cariñena 
+
+Cainho Branco1:
+ id: 163
+ grape_id: 330
+ name: Cainho Branco
+
+Athiri0:
+ id: 164
+ grape_id: NULL
+ name: Athiri
+
+Kékoportó1:
+ id: 165
+ grape_id: 300
+ name: Kékoportó
+
+Touriga Francesa1:
+ id: 166
+ grape_id: 334
+ name: Touriga Francesa
+
+Furmint 0:
+ id: 167
+ grape_id: NULL
+ name: Furmint 
+
+Okuzgozu0:
+ id: 168
+ grape_id: NULL
+ name: Okuzgozu
+
+Merseguera 0:
+ id: 169
+ grape_id: NULL
+ name: Merseguera 
+
+Ruby Cabernet0:
+ id: 170
+ grape_id: NULL
+ name: Ruby Cabernet
+
+Izkiriota Ttipi1:
+ id: 171
+ grape_id: 336
+ name: Izkiriota Ttipi
+
+Weisser Gutedel 1:
+ id: 172
+ grape_id: 406
+ name: Weisser Gutedel 
+
+Fetiaska 1:
+ id: 173
+ grape_id: 308
+ name: Fetiaska 
+
+Cannonau1:
+ id: 174
+ grape_id: 221
+ name: Cannonau
+
+Pinot Bianco 1:
+ id: 175
+ grape_id: 88
+ name: Pinot Bianco 
+
+Bonarda0:
+ id: 176
+ grape_id: NULL
+ name: Bonarda
+
+Parč0:
+ id: 177
+ grape_id: NULL
+ name: Parč
+
+Grenache Gris0:
+ id: 178
+ grape_id: NULL
+ name: Grenache Gris
+
+Agiorgitiko0:
+ id: 179
+ grape_id: NULL
+ name: Agiorgitiko
+
+Muscadelle 1:
+ id: 180
+ grape_id: 322
+ name: Muscadelle 
+
+Clairette0:
+ id: 181
+ grape_id: NULL
+ name: Clairette
+
+Aglianico0:
+ id: 182
+ grape_id: NULL
+ name: Aglianico
+
+Greco Bianco0:
+ id: 183
+ grape_id: NULL
+ name: Greco Bianco
+
+Moscatell 1:
+ id: 184
+ grape_id: 322
+ name: Moscatell 
+
+Silvaner 0:
+ id: 185
+ grape_id: NULL
+ name: Silvaner 
+
+Schiras1:
+ id: 186
+ grape_id: 390
+ name: Schiras
+
+Müllerebe1:
+ id: 187
+ grape_id: 211
+ name: Müllerebe
+
+Ansonica0:
+ id: 188
+ grape_id: NULL
+ name: Ansonica
+
+Hárslevelű0:
+ id: 189
+ grape_id: NULL
+ name: Hárslevelű
+
+Doradillo0:
+ id: 190
+ grape_id: NULL
+ name: Doradillo
+
+Rubired0:
+ id: 191
+ grape_id: NULL
+ name: Rubired
+
+Alcañón 1:
+ id: 192
+ grape_id: 257
+ name: Alcañón 
+
+Malagousia0:
+ id: 193
+ grape_id: NULL
+ name: Malagousia
+
+Castiglione0:
+ id: 194
+ grape_id: NULL
+ name: Castiglione
+
+Cabernet Franc0:
+ id: 195
+ grape_id: NULL
+ name: Cabernet Franc
+
+Trollinger1:
+ id: 196
+ grape_id: 133
+ name: Trollinger
+
+Grillo0:
+ id: 197
+ grape_id: NULL
+ name: Grillo
+
+Sercial 0:
+ id: 198
+ grape_id: NULL
+ name: Sercial 
+
+Moscatel de Setúbal1:
+ id: 199
+ grape_id: 322
+ name: Moscatel de Setúbal
+
+Arneis0:
+ id: 200
+ grape_id: NULL
+ name: Arneis
+
+Verdelho 0:
+ id: 201
+ grape_id: NULL
+ name: Verdelho 
+
+Candive1:
+ id: 202
+ grape_id: 390
+ name: Candive
+
+Malvar0:
+ id: 203
+ grape_id: NULL
+ name: Malvar
+
+Sirac1:
+ id: 204
+ grape_id: 390
+ name: Sirac
+
+Mujuretuli0:
+ id: 205
+ grape_id: NULL
+ name: Mujuretuli
+
+Maria Gomes 0:
+ id: 206
+ grape_id: NULL
+ name: Maria Gomes 
+
+Mammolino0:
+ id: 207
+ grape_id: NULL
+ name: Mammolino
+
+Merlot0:
+ id: 208
+ grape_id: NULL
+ name: Merlot
+
+Vitovska0:
+ id: 209
+ grape_id: NULL
+ name: Vitovska
+
+Calitor0:
+ id: 210
+ grape_id: NULL
+ name: Calitor
+
+Pinot Meunier 0:
+ id: 211
+ grape_id: NULL
+ name: Pinot Meunier 
+
+Bogdanuša0:
+ id: 212
+ grape_id: NULL
+ name: Bogdanuša
+
+Rivaner1:
+ id: 213
+ grape_id: 381
+ name: Rivaner
+
+Juhfark0:
+ id: 214
+ grape_id: NULL
+ name: Juhfark
+
+Wildbacher0:
+ id: 215
+ grape_id: NULL
+ name: Wildbacher
+
+Kalecik Karasi0:
+ id: 216
+ grape_id: NULL
+ name: Kalecik Karasi
+
+Lemberger 1:
+ id: 217
+ grape_id: 69
+ name: Lemberger 
+
+Montepulciano0:
+ id: 218
+ grape_id: NULL
+ name: Montepulciano
+
+Molinara0:
+ id: 219
+ grape_id: NULL
+ name: Molinara
+
+Zierfandler1:
+ id: 220
+ grape_id: 61
+ name: Zierfandler
+
+Garnatxa 0:
+ id: 221
+ grape_id: NULL
+ name: Garnatxa 
+
+Bouvier0:
+ id: 222
+ grape_id: NULL
+ name: Bouvier
+
+Vranac0:
+ id: 223
+ grape_id: NULL
+ name: Vranac
+
+Carménère0:
+ id: 224
+ grape_id: NULL
+ name: Carménère
+
+Knipperle 0:
+ id: 225
+ grape_id: NULL
+ name: Knipperle 
+
+Welschriesling 0:
+ id: 226
+ grape_id: NULL
+ name: Welschriesling 
+
+Burger 0:
+ id: 227
+ grape_id: NULL
+ name: Burger 
+
+Melon de Bourgogne 0:
+ id: 228
+ grape_id: NULL
+ name: Melon de Bourgogne 
+
+Treixadura 0:
+ id: 229
+ grape_id: NULL
+ name: Treixadura 
+
+Melon de Bourgogne1:
+ id: 230
+ grape_id: 44
+ name: Melon de Bourgogne
+
+Moschofilero0:
+ id: 231
+ grape_id: NULL
+ name: Moschofilero
+
+Muscat Frontignan 1:
+ id: 232
+ grape_id: 322
+ name: Muscat Frontignan 
+
+Loureira0:
+ id: 233
+ grape_id: NULL
+ name: Loureira
+
+Tannat0:
+ id: 234
+ grape_id: NULL
+ name: Tannat
+
+Arinto0:
+ id: 235
+ grape_id: NULL
+ name: Arinto
+
+Airén 0:
+ id: 236
+ grape_id: NULL
+ name: Airén 
+
+Lambrusco0:
+ id: 237
+ grape_id: NULL
+ name: Lambrusco
+
+Nero d'Avola0:
+ id: 238
+ grape_id: NULL
+ name: Nero d'Avola
+
+Abouriou1:
+ id: 239
+ grape_id: 283
+ name: Abouriou
+
+Rufeta1:
+ id: 240
+ grape_id: 57
+ name: Rufeta
+
+Bobal0:
+ id: 241
+ grape_id: NULL
+ name: Bobal
+
+Croatina0:
+ id: 242
+ grape_id: NULL
+ name: Croatina
+
+Rondinella0:
+ id: 243
+ grape_id: NULL
+ name: Rondinella
+
+Bastardo 0:
+ id: 244
+ grape_id: NULL
+ name: Bastardo 
+
+Grasă de Cotnari0:
+ id: 245
+ grape_id: NULL
+ name: Grasă de Cotnari
+
+Petit Meslier0:
+ id: 246
+ grape_id: NULL
+ name: Petit Meslier
+
+Gamay Noir1:
+ id: 247
+ grape_id: 401
+ name: Gamay Noir
+
+Xynisteri0:
+ id: 248
+ grape_id: NULL
+ name: Xynisteri
+
+Escanyavella1:
+ id: 249
+ grape_id: 169
+ name: Escanyavella
+
+Sauvignon Vert1:
+ id: 250
+ grape_id: 322
+ name: Sauvignon Vert
+
+Mtsvane0:
+ id: 251
+ grape_id: NULL
+ name: Mtsvane
+
+Lazki Rizling1:
+ id: 252
+ grape_id: 226
+ name: Lazki Rizling
+
+Cserszegi Fűszeres0:
+ id: 253
+ grape_id: NULL
+ name: Cserszegi Fűszeres
+
+Xarello1:
+ id: 254
+ grape_id: 56
+ name: Xarello
+
+Klein Rauschling1:
+ id: 255
+ grape_id: 225
+ name: Klein Rauschling
+
+Smederevka0:
+ id: 256
+ grape_id: NULL
+ name: Smederevka
+
+Macabeo 0:
+ id: 257
+ grape_id: NULL
+ name: Macabeo 
+
+St. Laurent 0:
+ id: 258
+ grape_id: NULL
+ name: St. Laurent 
+
+Barcelos0:
+ id: 259
+ grape_id: NULL
+ name: Barcelos
+
+Macabeo 1:
+ id: 260
+ grape_id: 11
+ name: Macabeo 
+
+Sousão0:
+ id: 261
+ grape_id: NULL
+ name: Sousão
+
+Petit Verdot0:
+ id: 262
+ grape_id: NULL
+ name: Petit Verdot
+
+Pinot Gris1:
+ id: 263
+ grape_id: 141
+ name: Pinot Gris
+
+Mataro1:
+ id: 264
+ grape_id: 40
+ name: Mataro
+
+Ojaleshi0:
+ id: 265
+ grape_id: NULL
+ name: Ojaleshi
+
+Zéta0:
+ id: 266
+ grape_id: NULL
+ name: Zéta
+
+Blauburgunder 1:
+ id: 267
+ grape_id: 27
+ name: Blauburgunder 
+
+Roussanne0:
+ id: 268
+ grape_id: NULL
+ name: Roussanne
+
+Rhoditis0:
+ id: 269
+ grape_id: NULL
+ name: Rhoditis
+
+Alvarelhão0:
+ id: 270
+ grape_id: NULL
+ name: Alvarelhão
+
+Grenache Blanc0:
+ id: 271
+ grape_id: NULL
+ name: Grenache Blanc
+
+Charbono0:
+ id: 272
+ grape_id: NULL
+ name: Charbono
+
+Ortega0:
+ id: 273
+ grape_id: NULL
+ name: Ortega
+
+Würzer0:
+ id: 274
+ grape_id: NULL
+ name: Würzer
+
+Sémillon0:
+ id: 275
+ grape_id: NULL
+ name: Sémillon
+
+Incrocio Manzoni0:
+ id: 276
+ grape_id: NULL
+ name: Incrocio Manzoni
+
+Tinta Roriz 1:
+ id: 277
+ grape_id: 340
+ name: Tinta Roriz 
+
+Cot1:
+ id: 278
+ grape_id: 160
+ name: Cot
+
+Verdia1:
+ id: 279
+ grape_id: 113
+ name: Verdia
+
+Cerceal1:
+ id: 280
+ grape_id: 198
+ name: Cerceal
+
+Symphony0:
+ id: 281
+ grape_id: NULL
+ name: Symphony
+
+Len de l'El0:
+ id: 282
+ grape_id: NULL
+ name: Len de l'El
+
+Acolon0:
+ id: 283
+ grape_id: NULL
+ name: Acolon
+
+Marsanne Noir1:
+ id: 284
+ grape_id: 390
+ name: Marsanne Noir
+
+Vilana0:
+ id: 285
+ grape_id: NULL
+ name: Vilana
+
+Bual 0:
+ id: 286
+ grape_id: NULL
+ name: Bual 
+
+Ezerjó0:
+ id: 287
+ grape_id: NULL
+ name: Ezerjó
+
+Négrette0:
+ id: 288
+ grape_id: NULL
+ name: Négrette
+
+Gouais blanc0:
+ id: 289
+ grape_id: NULL
+ name: Gouais blanc
+
+Pignerol0:
+ id: 290
+ grape_id: NULL
+ name: Pignerol
+
+Gellewza0:
+ id: 291
+ grape_id: NULL
+ name: Gellewza
+
+Rotgipfler0:
+ id: 292
+ grape_id: NULL
+ name: Rotgipfler
+
+Cabernet Sauvignon0:
+ id: 293
+ grape_id: NULL
+ name: Cabernet Sauvignon
+
+Tokay1:
+ id: 294
+ grape_id: 322
+ name: Tokay
+
+Castelão 0:
+ id: 295
+ grape_id: NULL
+ name: Castelão 
+
+Amigne0:
+ id: 296
+ grape_id: NULL
+ name: Amigne
+
+Parellada0:
+ id: 297
+ grape_id: NULL
+ name: Parellada
+
+Nerello Cappuccio0:
+ id: 298
+ grape_id: NULL
+ name: Nerello Cappuccio
+
+Rheinriesling 1:
+ id: 299
+ grape_id: 10
+ name: Rheinriesling 
+
+Blauer Portugieser 0:
+ id: 300
+ grape_id: NULL
+ name: Blauer Portugieser 
+
+Chenin Blanc 0:
+ id: 301
+ grape_id: NULL
+ name: Chenin Blanc 
+
+Azal Espanhol 1:
+ id: 302
+ grape_id: 26
+ name: Azal Espanhol 
+
+Optima0:
+ id: 303
+ grape_id: NULL
+ name: Optima
+
+Kratosija0:
+ id: 304
+ grape_id: NULL
+ name: Kratosija
+
+Fernão Pires1:
+ id: 305
+ grape_id: 206
+ name: Fernão Pires
+
+Malvasia0:
+ id: 306
+ grape_id: NULL
+ name: Malvasia
+
+Plavac Mali0:
+ id: 307
+ grape_id: NULL
+ name: Plavac Mali
+
+Fetească Albă 0:
+ id: 308
+ grape_id: NULL
+ name: Fetească Albă 
+
+Garnacha 1:
+ id: 309
+ grape_id: 221
+ name: Garnacha 
+
+Marsigliana0:
+ id: 310
+ grape_id: NULL
+ name: Marsigliana
+
+Periquita1:
+ id: 311
+ grape_id: 295
+ name: Periquita
+
+Monica0:
+ id: 312
+ grape_id: NULL
+ name: Monica
+
+Perle0:
+ id: 313
+ grape_id: NULL
+ name: Perle
+
+Moscatel Branco1:
+ id: 314
+ grape_id: 322
+ name: Moscatel Branco
+
+Flora0:
+ id: 315
+ grape_id: NULL
+ name: Flora
+
+Tinta Pinheira 1:
+ id: 316
+ grape_id: 57
+ name: Tinta Pinheira 
+
+Bordelesa Zuri1:
+ id: 317
+ grape_id: 103
+ name: Bordelesa Zuri
+
+Tinta Cão0:
+ id: 318
+ grape_id: NULL
+ name: Tinta Cão
+
+Roriz0:
+ id: 319
+ grape_id: NULL
+ name: Roriz
+
+Aragones0:
+ id: 320
+ grape_id: NULL
+ name: Aragones
+
+Brunello1:
+ id: 321
+ grape_id: 142
+ name: Brunello
+
+Muscat 0:
+ id: 322
+ grape_id: NULL
+ name: Muscat 
+
+Nocera0:
+ id: 323
+ grape_id: NULL
+ name: Nocera
+
+Biancone0:
+ id: 324
+ grape_id: NULL
+ name: Biancone
+
+Faber0:
+ id: 325
+ grape_id: NULL
+ name: Faber
+
+Ehrenfelser0:
+ id: 326
+ grape_id: NULL
+ name: Ehrenfelser
+
+Savagnin Rosé1:
+ id: 327
+ grape_id: 420
+ name: Savagnin Rosé
+
+Sereksia0:
+ id: 328
+ grape_id: NULL
+ name: Sereksia
+
+Lagrein0:
+ id: 329
+ grape_id: NULL
+ name: Lagrein
+
+Albariño 0:
+ id: 330
+ grape_id: NULL
+ name: Albariño 
+
+Sciacarello0:
+ id: 331
+ grape_id: NULL
+ name: Sciacarello
+
+Teroldego0:
+ id: 332
+ grape_id: NULL
+ name: Teroldego
+
+Kerner0:
+ id: 333
+ grape_id: NULL
+ name: Kerner
+
+Touriga Franca 0:
+ id: 334
+ grape_id: NULL
+ name: Touriga Franca 
+
+Mayorquin0:
+ id: 335
+ grape_id: NULL
+ name: Mayorquin
+
+Petit Manseng 0:
+ id: 336
+ grape_id: NULL
+ name: Petit Manseng 
+
+Freisa0:
+ id: 337
+ grape_id: NULL
+ name: Freisa
+
+Aligoté0:
+ id: 338
+ grape_id: NULL
+ name: Aligoté
+
+Fendant 1:
+ id: 339
+ grape_id: 78
+ name: Fendant 
+
+Tempranillo 0:
+ id: 340
+ grape_id: NULL
+ name: Tempranillo 
+
+Bacchus0:
+ id: 341
+ grape_id: NULL
+ name: Bacchus
+
+Pecorello0:
+ id: 342
+ grape_id: NULL
+ name: Pecorello
+
+Gutedel1:
+ id: 343
+ grape_id: 78
+ name: Gutedel
+
+Prosecco0:
+ id: 344
+ grape_id: NULL
+ name: Prosecco
+
+Folle Blanche 0:
+ id: 345
+ grape_id: NULL
+ name: Folle Blanche 
+
+Godello1:
+ id: 346
+ grape_id: 201
+ name: Godello
+
+Brachetto0:
+ id: 347
+ grape_id: NULL
+ name: Brachetto
+
+Troia0:
+ id: 348
+ grape_id: NULL
+ name: Troia
+
+Preto de Mortágua1:
+ id: 349
+ grape_id: 26
+ name: Preto de Mortágua
+
+Ladikino0:
+ id: 350
+ grape_id: NULL
+ name: Ladikino
+
+Auxerrois 1:
+ id: 351
+ grape_id: 160
+ name: Auxerrois 
+
+Savatiano0:
+ id: 352
+ grape_id: NULL
+ name: Savatiano
+
+Cortese0:
+ id: 353
+ grape_id: NULL
+ name: Cortese
+
+Trousseau Gris 0:
+ id: 354
+ grape_id: NULL
+ name: Trousseau Gris 
+
+Rkatsiteli0:
+ id: 355
+ grape_id: NULL
+ name: Rkatsiteli
+
+Greco Nero0:
+ id: 356
+ grape_id: NULL
+ name: Greco Nero
+
+Nerello Mascalese0:
+ id: 357
+ grape_id: NULL
+ name: Nerello Mascalese
+
+Malvasia Nera0:
+ id: 358
+ grape_id: NULL
+ name: Malvasia Nera
+
+Izkiriota Handi1:
+ id: 359
+ grape_id: 134
+ name: Izkiriota Handi
+
+Tramini1:
+ id: 360
+ grape_id: 396
+ name: Tramini
+
+Szürkebarát1:
+ id: 361
+ grape_id: 141
+ name: Szürkebarát
+
+Carignan 0:
+ id: 362
+ grape_id: NULL
+ name: Carignan 
+
+Mencia0:
+ id: 363
+ grape_id: NULL
+ name: Mencia
+
+Pecorino0:
+ id: 364
+ grape_id: NULL
+ name: Pecorino
+
+Mavro0:
+ id: 365
+ grape_id: NULL
+ name: Mavro
+
+Valdiguié0:
+ id: 366
+ grape_id: NULL
+ name: Valdiguié
+
+Grechetto0:
+ id: 367
+ grape_id: NULL
+ name: Grechetto
+
+Viognier0:
+ id: 368
+ grape_id: NULL
+ name: Viognier
+
+Crljenak Kaštelanski 1:
+ id: 369
+ grape_id: 411
+ name: Crljenak Kaštelanski 
+
+Magliocco0:
+ id: 370
+ grape_id: NULL
+ name: Magliocco
+
+Morio-Muskat0:
+ id: 371
+ grape_id: NULL
+ name: Morio-Muskat
+
+Mavrodafni0:
+ id: 372
+ grape_id: NULL
+ name: Mavrodafni
+
+Grenache 1:
+ id: 373
+ grape_id: 221
+ name: Grenache 
+
+Pais0:
+ id: 374
+ grape_id: NULL
+ name: Pais
+
+Tarrango0:
+ id: 375
+ grape_id: NULL
+ name: Tarrango
+
+Rabigato0:
+ id: 376
+ grape_id: NULL
+ name: Rabigato
+
+Sagrantino0:
+ id: 377
+ grape_id: NULL
+ name: Sagrantino
+
+Marsanne0:
+ id: 378
+ grape_id: NULL
+ name: Marsanne
+
+Grecanico0:
+ id: 379
+ grape_id: NULL
+ name: Grecanico
+
+Syra1:
+ id: 380
+ grape_id: 390
+ name: Syra
+
+Müller-Thurgau 0:
+ id: 381
+ grape_id: NULL
+ name: Müller-Thurgau 
+
+Taminga0:
+ id: 382
+ grape_id: NULL
+ name: Taminga
+
+Oseleta0:
+ id: 383
+ grape_id: NULL
+ name: Oseleta
+
+Ancellotta0:
+ id: 384
+ grape_id: NULL
+ name: Ancellotta
+
+Antourenein Noir1:
+ id: 385
+ grape_id: 390
+ name: Antourenein Noir
+
+Catarratto0:
+ id: 386
+ grape_id: NULL
+ name: Catarratto
+
+Pinot Nero1:
+ id: 387
+ grape_id: 27
+ name: Pinot Nero
+
+Muskateller 1:
+ id: 388
+ grape_id: 322
+ name: Muskateller 
+
+Ruché0:
+ id: 389
+ grape_id: NULL
+ name: Ruché
+
+Shiraz 0:
+ id: 390
+ grape_id: NULL
+ name: Shiraz 
+
+Rolle1:
+ id: 391
+ grape_id: 421
+ name: Rolle
+
+Xuri Zerratua 1:
+ id: 392
+ grape_id: 103
+ name: Xuri Zerratua 
+
+Reichensteiner0:
+ id: 393
+ grape_id: NULL
+ name: Reichensteiner
+
+Alvarinho 1:
+ id: 394
+ grape_id: 330
+ name: Alvarinho 
+
+Torrontés0:
+ id: 395
+ grape_id: NULL
+ name: Torrontés
+
+Gewürztraminer 0:
+ id: 396
+ grape_id: NULL
+ name: Gewürztraminer 
+
+Saperavi0:
+ id: 397
+ grape_id: NULL
+ name: Saperavi
+
+Zweigeltrebe 1:
+ id: 398
+ grape_id: 91
+ name: Zweigeltrebe 
+
+Klevener de Heiligenstein 1:
+ id: 399
+ grape_id: 420
+ name: Klevener de Heiligenstein 
+
+Dobričić0:
+ id: 400
+ grape_id: NULL
+ name: Dobričić
+
+Gamay 0:
+ id: 401
+ grape_id: NULL
+ name: Gamay 
+
+Bical0:
+ id: 402
+ grape_id: NULL
+ name: Bical
+
+Pedro Ximénez 0:
+ id: 403
+ grape_id: NULL
+ name: Pedro Ximénez 
+
+Auxerrois Blanc0:
+ id: 404
+ grape_id: NULL
+ name: Auxerrois Blanc
+
+Krstač0:
+ id: 405
+ grape_id: NULL
+ name: Krstač
+
+Huxelrebe 0:
+ id: 406
+ grape_id: NULL
+ name: Huxelrebe 
+
+Fetească Neagră0:
+ id: 407
+ grape_id: NULL
+ name: Fetească Neagră
+
+Siegerrebe0:
+ id: 408
+ grape_id: NULL
+ name: Siegerrebe
+
+Klevner 1:
+ id: 409
+ grape_id: 88
+ name: Klevner 
+
+Österreicher1:
+ id: 410
+ grape_id: 185
+ name: Österreicher
+
+Zinfandel 0:
+ id: 411
+ grape_id: NULL
+ name: Zinfandel 
+
+Mosler 1:
+ id: 412
+ grape_id: 167
+ name: Mosler 
+
+Sauvignon Blanc0:
+ id: 413
+ grape_id: NULL
+ name: Sauvignon Blanc
+
+Valdepeñas1:
+ id: 414
+ grape_id: 236
+ name: Valdepeñas
+
+Grignolino0:
+ id: 415
+ grape_id: NULL
+ name: Grignolino
+
+Olaszrizling 1:
+ id: 416
+ grape_id: 226
+ name: Olaszrizling 
+
+Greco0:
+ id: 417
+ grape_id: NULL
+ name: Greco
+
+Mauzac0:
+ id: 418
+ grape_id: NULL
+ name: Mauzac
+
+Nebbiolo0:
+ id: 419
+ grape_id: NULL
+ name: Nebbiolo
+
+Savagnin 0:
+ id: 420
+ grape_id: NULL
+ name: Savagnin 
+
+Vermentino 0:
+ id: 421
+ grape_id: NULL
+ name: Vermentino 
+
+Friulano0:
+ id: 422
+ grape_id: NULL
+ name: Friulano
+
+Borgonja Crna0:
+ id: 423
+ grape_id: NULL
+ name: Borgonja Crna
+
+Schönburger0:
+ id: 424
+ grape_id: NULL
+ name: Schönburger
+
+Irsai Oliver0:
+ id: 425
+ grape_id: NULL
+ name: Irsai Oliver
+
+Trousseau1:
+ id: 426
+ grape_id: 244
+ name: Trousseau
+
+Macabeu 1:
+ id: 427
+ grape_id: 257
+ name: Macabeu 
+

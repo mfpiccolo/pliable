@@ -1,0 +1,54 @@
+  [1m[36m (127.0ms)[0m  [1mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (364.8ms)[0m  CREATE DATABASE "dummy_test" ENCODING = 'utf8'
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "authors" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "names_vector" tsvector) [0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "idx_names_vector_on_authors" ON "authors" ("names_vector")
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "bottles" ("id" serial primary key, "name" character varying(255), "varietal" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "foos" ("id" serial primary key, "field1" character varying(255), "field2" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "names" ("id" serial primary key, "name" character varying(255), "count" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "idx_trgm_on_name_words" ON "names" ("name")
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "varietals" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "idx_trgm_on_varietals" ON "varietals" ("name")
+  [1m[36m (114.2ms)[0m  [1mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (242.4ms)[0m  CREATE DATABASE "dummy_test" ENCODING = 'utf8'
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "authors" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "names_vector" tsvector) [0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "idx_names_vector_on_authors" ON "authors" ("names_vector")
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "bottles" ("id" serial primary key, "name" character varying(255), "varietal" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "foos" ("id" serial primary key, "field1" character varying(255), "field2" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "names" ("id" serial primary key, "name" character varying(255), "count" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (10.8ms)[0m  CREATE INDEX "idx_trgm_on_name_words" ON "names" ("name")
+  [1m[36m (7.3ms)[0m  [1mCREATE TABLE "varietals" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE INDEX "idx_trgm_on_varietals" ON "varietals" ("name")
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePliesAndPlyRelations (20140117210156)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePliesAndPlyRelations (20140117210156)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "plies" ("id" serial primary key, "user_id" integer, "oid" character varying(255), "otype" character varying(255), "data" json, "ohash" hstore, "last_modified" timestamp, "last_checked" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::UndefinedObject: ERROR:  type "hstore" does not exist
+LINE 1: ...ype" character varying(255), "data" json, "ohash" hstore, "l...
+                                                             ^
+: CREATE TABLE "plies" ("id" serial primary key, "user_id" integer, "oid" character varying(255), "otype" character varying(255), "data" json, "ohash" hstore, "last_modified" timestamp, "last_checked" timestamp, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePliesAndPlyRelations (20140117210156)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "plies" ("id" serial primary key, "user_id" integer, "oid" character varying(255), "otype" character varying(255), "data" json, "last_modified" timestamp, "last_checked" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "ply_relations" ("id" serial primary key, "parent_id" integer, "parent_type" character varying(255), "child_id" integer, "child_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140117210156"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5042.4ms)[0m  [1mDROP DATABASE IF EXISTS "dummy_test"[0m
+PG::ObjectInUse: ERROR:  database "dummy_test" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "dummy_test"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (112.9ms)[0m  [1mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (246.1ms)[0m  CREATE DATABASE "dummy_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "plies" ("id" serial primary key, "user_id" integer, "oid" character varying(255), "otype" character varying(255), "data" json, "last_modified" timestamp, "last_checked" timestamp, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "ply_relations" ("id" serial primary key, "parent_id" integer, "parent_type" character varying(255), "child_id" integer, "child_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
