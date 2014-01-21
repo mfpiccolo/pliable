@@ -2,7 +2,7 @@ require 'active_record'
 
 module Pliable
   class Ply < ActiveRecord::Base
-    belongs_to :user
+    # TODO move to Dummy
 
     # Allows an ply to associate another ply as either a parent or child
     has_many :ply_relations
@@ -37,18 +37,11 @@ module Pliable
     end
 
     def self.ply_name(name)
-      self.class.instance_eval do
-        define_method(:ply_type) { name }
-      end
+      define_singleton_method(:ply_type) { name }
     end
 
     def to_param
       oid
-    end
-
-    def link
-      # TODO make this check env for host
-      "https://localhost:3001/invoices/#{self.oid}"
     end
 
     private
@@ -64,21 +57,33 @@ module Pliable
 
     def define_ply_scopes
       # pluralize is not perfect.  ie. Merchandise__c => merchandises
-      children.pluck(:child_type).uniq.each do |name|
-        define_singleton_method(scopify(name)) do
+      child_names  = children.pluck(:child_type).uniq
+      parent_names = parents.pluck(:parent_type).uniq
+
+      add_scopes(child_names, parent_names)
+    end
+
+    def add_scopes(child_names, parent_names)
+      child_names.each do |name|
+        define_singleton_method(scrub_for_scope(name)) do
           children.where(otype: name)
         end
       end
 
-      parents.pluck(:parent_type).uniq.each do |name|
-        define_singleton_method(scopify(name)) do
+      parent_names.each do |name|
+        define_singleton_method(scrub_for_scope(name)) do
           parents.where(otype: name)
         end
       end
     end
 
-    def scopify(name)
-      TextHelper.pluralize(name.gsub('__c', '').downcase)
+    # user initializer to overwrite this method
+    def scrub_for_scope(name)
+      if respond_to? :added_scrubber
+        name = added_scrubber(name)
+      end
+
+      TextHelper.pluralize(name.downcase)
     end
   end # Ply
 end # Pliable
