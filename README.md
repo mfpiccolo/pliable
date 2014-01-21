@@ -18,7 +18,92 @@ Pliable makes integrating a Rails project with Schemaless data not so painful.
 
 Rolling your own integration with an external service where the schema can change from moment to moment can be tough.  Pliable makes it a bit easier by giving you a familiar place to store this data (models backed by postgres) and familiar ways of interacting with it (Active Record objects, complete with associations).
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem "pliable"
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install pliable
+
 ## Features
+
+Pliable allows you to save individual records from external schemaless databases into your postgres
+backed rails apps.  We store all of the data in a plies table.  The Ply model contains logic that allows
+you to inherit from Ply and then act as if these iherited models are normal Active Record models.
+
+Here is the Ply model your generator created:
+
+```ruby
+class Ply < Pliable::Ply
+  # Define methods here that you want all you Ply backed models to have.
+end
+```
+
+Now you can create a model that is backed by Ply.
+
+```ruby
+class Foo < Ply
+  # This is redundant if it is the same name ass the class but required for now.
+  ply_name "Foo"
+  # Define methods that you only want Foo to have.
+end
+```
+
+Now lets make another Ply Backed Model.
+
+```ruby
+class Bar < Ply
+  ply_name "Bar"
+end
+```
+
+Now you should be able to treat these like any other Active Record object with the added bonus of a
+few features.  You can assign any json data to the data attribute.
+
+```ruby
+foo = Foo.create(data: {"some" => "json", "other" => "data"})
+```
+The nice part is now these json keys are methods.
+```ruby
+foo.some => "json"
+```
+
+Another nicety is associations.  You can associate a Ply inhereted class to another using parent
+and child relationships and the PlyRelations model
+```ruby
+foo = Foo.create
+bar = Bar.create
+PlyRealation.create(parent_id: foo.id, parent_type: foo.class.name, child_id: bar, child_type: bar.class.name)
+
+foo.bars => <#<ActiveRecord::AssociationRelation [#<Pliable::Ply id: 2 otype: "Bar" ...>
+```
+
+## Configuration
+
+To use the generator run:
+
+    $ rails g pliable:model
+
+This will set up pliable.rb initializer, create the migration and run it and add a Ply model and specs.
+
+In the initializer, specify any aditional logic you need to prepare the ply_name for pluralization.
+
+```ruby
+Pliable.configure do |config|
+  # Add logic to this bloc to change the names given by external services so we can pluralize.
+  # For instance if you ply names need to gsub __c of the end do:
+  config.added_scrubber {|name| name.gsub('__c', '') }
+end
+```
 
 ## Examples
 
@@ -33,11 +118,6 @@ class Ply < Pliable::Ply
   # Define methods here that you want all of your models to have
   def anything_you_like
     puts "I can play disco all night"
-  end
-
-  # You will see why we want this method on all our models shortly
-  def scopify(name)
-    TextHelper.pluralize(name.gsub('__c', '').downcase)
   end
 
 end
@@ -179,23 +259,6 @@ Invoice.find_by_oid("random_oid_number") => #<Invoice id: 132, user_id: 1, oid: 
 ```
 
 ## Requirements
-
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem "pliable"
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pliable
 
 ## Donating
 Support this project and [others by mfpiccolo][gittip-mfpiccolo] via [gittip][gittip-mfpiccolo].
