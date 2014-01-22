@@ -3,6 +3,9 @@ rvm:
   - 1.9.3
   - 2.0.0
 
+before_install:
+  - gem install bundler -v '= 1.5.1'
+
 addons:
   postgresql: 9.2
 
