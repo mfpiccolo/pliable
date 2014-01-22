@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Pliable by mfpiccolo</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Pliable</h1>
+        <h2>Schemaless data integration with Rails and Postgres</h2>
+        <a href="https://github.com/mfpiccolo/pliable" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="pliable" class="anchor" href="#pliable"><span class="octicon octicon-link"></span></a>pliable</h1>
+
+<table>
+<thead><tr>
+<th>Project</th>
+<th>Gem Release</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Gem name</td>
+<td>pliable</td>
+</tr>
+<tr>
+<td>License</td>
+<td><a href="LICENSE.txt">MIT</a></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a href="http://badge.fury.io/rb/pliable"><img src="https://badge.fury.io/rb/pliable.png" alt="Gem Version"></a></td>
+</tr>
+<tr>
+<td>Continuous Integration</td>
+<td><a href="https://travis-ci.org/mfpiccolo/pliable"><img src="https://travis-ci.org/mfpiccolo/pliable.png?branch=master" alt="Build Status"></a></td>
+</tr>
+<tr>
+<td>Test Coverage</td>
+<td><a href="https://coveralls.io/r/mfpiccolo/pliable?branch=coveralls"><img src="https://coveralls.io/repos/mfpiccolo/pliable/badge.png?branch=master" alt="Coverage Status"></a></td>
+</tr>
+<tr>
+<td>Grade</td>
+<td><a href="https://codeclimate.com/github/mfpiccolo/pliable"><img src="https://codeclimate.com/github/mfpiccolo/pliable.png" alt="Code Climate"></a></td>
+</tr>
+<tr>
+<td>Homepage</td>
+<td><a href="http://mfpiccolo.github.io/pliable">http://mfpiccolo.github.io/pliable</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="http://rdoc.info/github/mfpiccolo/pliable/frames">http://rdoc.info/github/mfpiccolo/pliable/frames</a></td>
+</tr>
+<tr>
+<td>Issues</td>
+<td><a href="https://github.com/mfpiccolo/pliable/issues">https://github.com/mfpiccolo/pliable/issues</a></td>
+</tr>
+</tbody>
+</table><h2>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
+
+<p>Pliable makes integrating a Rails project with Schemaless data not so painful.</p>
+
+<p>Rolling your own integration with an external service where the schema can change from moment to moment can be tough.  Pliable makes it a bit easier by giving you a familiar place to store this data (models backed by postgres) and familiar ways of interacting with it (Active Record objects, complete with associations).</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s2">"pliable"</span>
+</pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install pliable
+</code></pre>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Pliable allows you to save individual records from external schemaless databases into your postgres
+backed rails apps.  We store all of the data in a plies table.  The Ply model contains logic that allows
+you to inherit from Ply and then act as if these iherited models are normal Active Record models.</p>
+
+<p>Here is the Ply model your generator created:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Ply</span> <span class="o">&lt;</span> <span class="no">Pliable</span><span class="o">::</span><span class="no">Ply</span>
+  <span class="c1"># Define methods here that you want all you Ply backed models to have.</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Now you can create a model that is backed by Ply.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Foo</span> <span class="o">&lt;</span> <span class="no">Ply</span>
+  <span class="c1"># This is redundant if it is the same name ass the class but required for now.</span>
+  <span class="n">ply_name</span> <span class="s2">"Foo"</span>
+  <span class="c1"># Define methods that you only want Foo to have.</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Now lets make another Ply Backed Model.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Bar</span> <span class="o">&lt;</span> <span class="no">Ply</span>
+  <span class="n">ply_name</span> <span class="s2">"Bar"</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Now you should be able to treat these like any other Active Record object with the added bonus of a
+few features.  You can assign any json data to the data attribute.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">foo</span> <span class="o">=</span> <span class="no">Foo</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="ss">data</span><span class="p">:</span> <span class="p">{</span><span class="s2">"some"</span> <span class="o">=&gt;</span> <span class="s2">"json"</span><span class="p">,</span> <span class="s2">"other"</span> <span class="o">=&gt;</span> <span class="s2">"data"</span><span class="p">})</span>
+</pre></div>
+
+<p>The nice part is now these json keys are methods.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">foo</span><span class="o">.</span><span class="n">some</span> <span class="o">=&gt;</span> <span class="s2">"json"</span>
+</pre></div>
+
+<p>Another nicety is associations.  You can associate a Ply inhereted class to another using parent
+and child relationships and the PlyRelations model</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">foo</span> <span class="o">=</span> <span class="no">Foo</span><span class="o">.</span><span class="n">create</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="no">Bar</span><span class="o">.</span><span class="n">create</span>
+<span class="no">PlyRealation</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">parent_id</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">parent_type</span><span class="p">:</span> <span class="n">foo</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">child_id</span><span class="p">:</span> <span class="n">bar</span><span class="p">,</span> <span class="n">child_type</span><span class="p">:</span> <span class="n">bar</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">bars</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="c1">#&lt;ActiveRecord::AssociationRelation [#&lt;Pliable::Ply id: 2 otype: "Bar" ...&gt;</span>
+</pre></div>
+
+<h2>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>To use the generator run:</p>
+
+<pre><code>$ rails g pliable:model
+</code></pre>
+
+<p>This will set up pliable.rb initializer, create the migration and run it and add a Ply model and specs.</p>
+
+<p>In the initializer, specify any aditional logic you need to prepare the ply_name for pluralization.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Pliable</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="c1"># Add logic to this bloc to change the names given by external services so we can pluralize.</span>
+  <span class="c1"># For instance if you ply names need to gsub __c of the end do:</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">added_scrubber</span> <span class="p">{</span><span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="nb">name</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s1">'__c'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>An example of a salesforce integration:</p>
+
+<p>Here is your Ply model:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1"># Notice it inherits from Pliable::Ply</span>
+<span class="k">class</span> <span class="nc">Ply</span> <span class="o">&lt;</span> <span class="no">Pliable</span><span class="o">::</span><span class="no">Ply</span>
+
+  <span class="c1"># Define methods here that you want all of your models to have</span>
+  <span class="k">def</span> <span class="nf">anything_you_like</span>
+    <span class="nb">puts</span> <span class="s2">"I can play disco all night"</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+<p>This is an example salesforce Invoice model:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1"># Notice it inherits from your apps Ply</span>
+<span class="k">class</span> <span class="nc">Invoice</span> <span class="o">&lt;</span> <span class="no">Ply</span>
+
+  <span class="c1"># If you dont put this you will get all Ply records.</span>
+  <span class="c1"># This is the name that you have put into the otype attribute.</span>
+  <span class="c1"># In this example I just used the exact salesforce api name</span>
+  <span class="n">ply_name</span> <span class="s2">"Invoice__c"</span>
+
+  <span class="c1"># Add Invoice specific methods here</span>
+  <span class="k">def</span> <span class="nf">what_dosnt_gather_moss?</span>
+    <span class="s2">"A rolling stone!"</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+<p>Here is an example associated salesforce model:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">LineItem</span> <span class="o">&lt;</span> <span class="no">Ply</span>
+
+  <span class="n">ply_name</span> <span class="s2">"Line_Item__c"</span>
+
+  <span class="c1"># You guessed it.  LineItem specific methods here.</span>
+  <span class="k">def</span> <span class="nf">best_pliable_quote</span>
+    <span class="s2">"Facts are stubborn, but statistics are more pliable. - Mark Twain"</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+<p>Here is your PlyRelation model:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1"># This will probably not be needed in the future and will live in the gem</span>
+<span class="k">class</span> <span class="nc">PlyRelation</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">belongs_to</span> <span class="ss">:parent</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="s1">'Ply'</span>
+  <span class="n">belongs_to</span> <span class="ss">:child</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="s1">'Ply'</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>A service object for pulling salesforce data into your app:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">SalesforceSynch</span>
+
+  <span class="kp">attr_reader</span> <span class="ss">:user</span><span class="p">,</span> <span class="ss">:client</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="vi">@user</span> <span class="o">=</span> <span class="n">user</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">call</span>
+    <span class="n">set_clients</span>  <span class="c1"># Connect to your Salesforce data (i.e. databsedotcom or restforce)</span>
+    <span class="n">create_plys_from_salesforce_records</span> <span class="c1"># Create records in your PG database using Ply model</span>
+    <span class="n">create_ply_relations</span> <span class="c1"># Dynamically create associations based on the data recieved</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">call</span>
+    <span class="kp">new</span><span class="o">.</span><span class="n">call</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">set_clients</span>
+    <span class="c1">#Fake service object that sets up a client to connect to databasedotcom</span>
+    <span class="vi">@client</span> <span class="o">=</span> <span class="no">ConnectToDatabasedotcom</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">salesforce_credentials</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">create_plys_from_salesforce_records</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="o">[]</span>
+
+    <span class="c1"># sf_api model names as strings in array</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="o">[]</span>
+
+    <span class="c1"># User has_many :plies in this example (i.e. user.plies)</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">get_the_records_you_want</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">record</span><span class="o">|</span>
+      <span class="n">object</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">plies</span><span class="o">.</span><span class="n">find_or_create_by</span><span class="p">(</span><span class="ss">oid</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">Id</span><span class="p">)</span>
+      <span class="n">object</span><span class="o">.</span><span class="n">update_attributes</span><span class="p">(</span>
+        <span class="c1"># The data attribute is a json column.  This is where you store all shcemaless data.</span>
+        <span class="ss">data</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+        <span class="c1"># Whatever the service calls the object (i.e. Invoice__c for salesforce)</span>
+        <span class="ss">otype</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">salesforce_api_name</span><span class="p">,</span>
+        <span class="c1"># Use last_checked and last_modified to know when you need to update a record</span>
+        <span class="n">last_checked</span><span class="p">:</span> <span class="no">Time</span><span class="o">.</span><span class="n">zone</span><span class="o">.</span><span class="n">now</span>
+      <span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Dynamically deduce if there is a relationship with any of the plys that have been imported.</span>
+  <span class="c1"># In the case of saleforce the id of related object is stored by using the name of that</span>
+  <span class="c1"># object as a key. (ie "Invoice__c" =&gt; "long_uiniq_id").  In this app users choose a few models</span>
+  <span class="c1"># that they want to bring over but you could easily just get everything.</span>
+    <span class="n">user</span><span class="o">.</span><span class="n">plies</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">ply</span><span class="o">|</span>
+      <span class="n">related_model_names</span> <span class="o">=</span> <span class="n">ply</span><span class="o">.</span><span class="n">instance_variables</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s2">"@"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span> <span class="p">}</span> <span class="o">&amp;</span> <span class="n">user</span><span class="o">.</span><span class="n">model_names</span>
+      <span class="n">related_model_names</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+        <span class="n">child</span> <span class="o">=</span> <span class="no">Ply</span><span class="o">.</span><span class="n">find_by_oid</span><span class="p">(</span><span class="n">ply</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">name</span><span class="o">.</span><span class="n">to_sym</span><span class="p">))</span>
+        <span class="k">unless</span> <span class="no">PlyRelation</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">parent_id</span><span class="p">:</span> <span class="n">record</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">child_id</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">present?</span>
+          <span class="n">ply</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="n">parent_id</span><span class="p">:</span> <span class="n">ply</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">parent_type</span><span class="p">:</span> <span class="n">ply</span><span class="o">.</span><span class="n">otype</span><span class="p">,</span>
+            <span class="n">child_id</span><span class="p">:</span> <span class="n">ply</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">child_type</span><span class="p">:</span> <span class="n">ply</span><span class="o">.</span><span class="n">otype</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">save</span> <span class="c1"># #create does not work yet.  Sorry</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Now with this setup you can run something like this</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">SalesforceSynch</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="vi">@user</span><span class="p">)</span>  <span class="c1"># Awesome.  You just imported all your salesforce data.</span>
+
+<span class="n">invoice</span> <span class="o">=</span> <span class="no">Invoice</span><span class="o">.</span><span class="n">first</span> <span class="o">=&gt;</span> <span class="c1">#&lt;Invoice id: 1, user_id: 1, oid: "randomnumber", otype: "Invoice__c",</span>
+<span class="c1"># data: {"Id"=&gt;"a00i000000BbWLvAAN", "OwnerId"=&gt;"005i0000002NdyWAAS", "Owner"=&gt;nil...}...&gt;</span>
+
+<span class="n">invoice</span><span class="o">.</span><span class="n">line_items</span> <span class="o">=&gt;</span> <span class="c1">#&lt;ActiveRecord::AssociationRelation [#&lt;Pliable::Ply id: 2 ...&gt;</span>
+
+<span class="n">invoice</span><span class="o">.</span><span class="n">line_items</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">invoices</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">invoice</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="o">===</span> <span class="n">invoice</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+
+<span class="n">invoice</span><span class="o">.</span><span class="n">SalesForceCustomAttribute__c</span> <span class="o">=&gt;</span> <span class="no">Whatever</span> <span class="n">it</span> <span class="n">is</span> <span class="k">in</span> <span class="n">salesforce</span><span class="o">.</span>
+
+<span class="no">Invoice</span><span class="o">.</span><span class="n">all</span> <span class="o">=&gt;</span> <span class="c1">#&lt;ActiveRecord::Relation [#&lt;Invoice id: 136, user_id: 1...&gt;</span>
+
+<span class="no">LineItem</span><span class="o">.</span><span class="n">first</span> <span class="o">=&gt;</span> <span class="c1">#&lt;LineItem id: 145, user_id: 1...&gt;</span>
+
+<span class="no">Invoice</span><span class="o">.</span><span class="n">find_by_oid</span><span class="p">(</span><span class="s2">"random_oid_number"</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="c1">#&lt;Invoice id: 132, user_id: 1, oid: "rand..."&gt;</span>
+
+<span class="c1"># All the normal active-recordy goodness</span>
+</pre></div>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<h2>
+<a name="donating" class="anchor" href="#donating"><span class="octicon octicon-link"></span></a>Donating</h2>
+
+<p>Support this project and <a href="https://www.gittip.com/mfpiccolo/">others by mfpiccolo</a> via <a href="https://www.gittip.com/mfpiccolo/">gittip</a>.</p>
+
+<h2>
+<a name="copyright" class="anchor" href="#copyright"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright (c) 2013 Mike Piccolo</p>
+
+<p>See <a href="LICENSE.txt">LICENSE.txt</a> for details.</p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="http://github.com/">http://github.com/</a>/pliable/fork )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol><p><a href="http://githalytics.com/mfpiccolo/pliable"><img src="https://cruel-carlota.pagodabox.com/e1a155a07163d56ca0c4f246c7aa8766" alt="githalytics.com alpha" title="githalytics.com"></a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/mfpiccolo/pliable/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/mfpiccolo/pliable/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/mfpiccolo/pliable"></a> is maintained by <a href="https://github.com/mfpiccolo">mfpiccolo</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
