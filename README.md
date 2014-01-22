@@ -6,8 +6,7 @@ pliable
 | License                 |  [MIT](LICENSE.txt)   |
 | Version                 |  [![Gem Version](https://badge.fury.io/rb/pliable.png)](http://badge.fury.io/rb/pliable) |
 | Continuous Integration  |  [![Build Status](https://travis-ci.org/mfpiccolo/pliable.png?branch=master)](https://travis-ci.org/mfpiccolo/pliable)
-| Test Coverage           |  [![Coverage Status](https://coveralls.io/repos/mfpiccolo/pliable/badge.png?branch=master)](https://coveralls.io/r/mfpiccolo/pliable?branch=coveralls)
-| Grade                   |  [![Code Climate](https://codeclimate.com/github/mfpiccolo/pliable.png)](https://codeclimate.com/github/mfpiccolo/pliable)
+Z| Grade                   |  [![Code Climate](https://codeclimate.com/github/mfpiccolo/pliable.png)](https://codeclimate.com/github/mfpiccolo/pliable)
 | Homepage                |  [http://mfpiccolo.github.io/pliable][homepage] |
 | Documentation           |  [http://rdoc.info/github/mfpiccolo/pliable/frames][documentation] |
 | Issues                  |  [https://github.com/mfpiccolo/pliable/issues][issues] |
@@ -279,7 +278,7 @@ See [LICENSE.txt](LICENSE.txt) for details.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/e1a155a07163d56ca0c4f246c7aa8766 "githalytics.com")](http://githalytics.com/mfpiccolo/pliable)
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3d22924e211bdc891d3ad124e085a595 "githalytics.com")](http://githalytics.com/mfpiccolo/pliable)
 
 [license]: https://github.com/mfpiccolo/pliable/MIT-LICENSE
 [homepage]: http://mfpiccolo.github.io/pliable
