@@ -5,8 +5,8 @@ require File.expand_path('../lib/pliable/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "pliable"
   gem.version       = Pliable::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = "Schemaless data integration with Rails and Postgres"
+  gem.description   = "Pliable makes integrating a Rails project with Schemaless data not so painful"
   gem.license       = "MIT"
   gem.authors       = ["Mike Piccolo"]
   gem.email         = "mfpiccolo@gmail.com"
@@ -22,15 +22,14 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'bundler', '~> 1.0'
   gem.add_development_dependency 'rake', '~> 0.8'
-  gem.add_development_dependency 'minitest'
-  gem.add_development_dependency 'mocha'
-  gem.add_development_dependency 'pry'
-  gem.add_development_dependency 'pry-debugger'
+  gem.add_development_dependency 'minitest', ">= 4.7.5"
+  gem.add_development_dependency 'mocha',    "~> 1.0.0"
+  gem.add_development_dependency 'pry',      "~> 0.9.12"
+  gem.add_development_dependency 'pry-debugger', "~> 0.2"
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
   gem.add_development_dependency 'yard', '~> 0.8'
   gem.add_development_dependency "rails",  ">= 4.0"
-  gem.add_development_dependency "pg"
-  gem.add_development_dependency "activerecord-nulldb-adapter"
-  gem.add_development_dependency "rspec"
-  gem.add_development_dependency "database_cleaner"
+  gem.add_development_dependency "pg",     "~> 0.17.1"
+  gem.add_development_dependency "rspec",  "~> 2.14"
+  gem.add_development_dependency "database_cleaner", "~> 1.0"
 end
