@@ -39,7 +39,7 @@ Pliable allows you to save individual records from external schemaless databases
 backed rails apps.  We store all of the data in a plies table.  The Ply model contains logic that allows
 you to inherit from Ply and then act as if these iherited models are normal Active Record models.
 
-Here is the Ply model your generator created:
+Here is the Ply model your generator created by running `rails g pliable:models`:
 
 ```ruby
 class Ply < Pliable::Ply
@@ -51,7 +51,7 @@ Now you can create a model that is backed by Ply.
 
 ```ruby
 class Foo < Ply
-  # This is redundant if it is the same name ass the class but required for now.
+  # This is redundant if it is the same name as the class but required for now.
   ply_name "Foo"
   # Define methods that you only want Foo to have.
 end
@@ -114,7 +114,7 @@ Here is your Ply model:
 # Notice it inherits from Pliable::Ply
 class Ply < Pliable::Ply
 
-  # Define methods here that you want all of your models to have
+  # Define methods here that you want all of your Ply inherited models to have
   def anything_you_like
     puts "I can play disco all night"
   end
@@ -130,12 +130,14 @@ class Invoice < Ply
 
   # If you dont put this you will get all Ply records.
   # This is the name that you have put into the otype attribute.
-  # In this example I just used the exact salesforce api name
+  # In this example I just used the exact salesforce api name.
+  # This is also why we need the configuration to strip off "__c"
+  # for pluralization.
   ply_name "Invoice__c"
 
   # Add Invoice specific methods here
   def what_dosnt_gather_moss?
-    "A rolling stone!"
+    puts "A rolling stone!"
   end
 
 end
@@ -150,19 +152,9 @@ class LineItem < Ply
 
   # You guessed it.  LineItem specific methods here.
   def best_pliable_quote
-    "Facts are stubborn, but statistics are more pliable. - Mark Twain"
+    puts "Facts are stubborn, but statistics are more pliable. - Mark Twain"
   end
 
-end
-```
-
-Here is your PlyRelation model:
-
-```ruby
-# This will probably not be needed in the future and will live in the gem
-class PlyRelation < ActiveRecord::Base
-  belongs_to :parent, class_name: 'Ply'
-  belongs_to :child, class_name: 'Ply'
 end
 ```
 
@@ -193,9 +185,6 @@ class SalesforceSynch
   end
 
   def create_plys_from_salesforce_records
-    data = []
-
-    # sf_api model names as strings in array
     records = []
 
     # User has_many :plies in this example (i.e. user.plies)
@@ -204,7 +193,7 @@ class SalesforceSynch
       object.update_attributes(
         # The data attribute is a json column.  This is where you store all shcemaless data.
         data: record.attributes,
-        # Whatever the service calls the object (i.e. Invoice__c for salesforce)
+        # Whatever the service calls the object (i.e. "Invoice__c" for salesforce)
         otype: record.salesforce_api_name,
         # Use last_checked and last_modified to know when you need to update a record
         last_checked: Time.zone.now
@@ -212,10 +201,10 @@ class SalesforceSynch
     end
   end
 
-  # Dynamically deduce if there is a relationship with any of the plys that have been imported.
+  # Dynamically deduce if there is a relationship with any of the plies that have been imported.
   # In the case of saleforce the id of related object is stored by using the name of that
   # object as a key. (ie "Invoice__c" => "long_uiniq_id").  In this app users choose a few models
-  # that they want to bring over but you could easily just get everything.
+  # that they want to bring over (i.e user.model_names).
     user.plies.each do |ply|
       related_model_names = ply.instance_variables.map {|e| e.to_s.gsub("@", "") } & user.model_names
       related_model_names.each do |name|
@@ -226,7 +215,7 @@ class SalesforceSynch
             parent_type: ply.otype,
             child_id: ply.id,
             child_type: ply.otype
-            ).save # #create does not work yet.  Sorry
+          ).save # #create does not work yet.  Sorry
         end
       end
     end
@@ -246,7 +235,7 @@ invoice.line_items => #<ActiveRecord::AssociationRelation [#<Pliable::Ply id: 2 
 
 invoice.line_items.first.invoices.find(invoice.id) === invoice => true
 
-invoice.SalesForceCustomAttribute__c => Whatever it is in salesforce.
+invoice.SalesForceCustomAttribute__c => # Whatever it is in salesforce.
 
 Invoice.all => #<ActiveRecord::Relation [#<Invoice id: 136, user_id: 1...>
 
