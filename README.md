@@ -6,7 +6,9 @@ pliable
 | License                 |  [MIT](LICENSE.txt)   |
 | Version                 |  [![Gem Version](https://badge.fury.io/rb/pliable.png)](http://badge.fury.io/rb/pliable) |
 | Continuous Integration  |  [![Build Status](https://travis-ci.org/mfpiccolo/pliable.png?branch=master)](https://travis-ci.org/mfpiccolo/pliable)
+| Test Coverage           |  [![Coverage Status](https://coveralls.io/repos/mfpiccolo/pliable/badge.png?branch=master)](https://coveralls.io/r/mfpiccolo/pliable?branch=coveralls)
 | Grade                   |  [![Code Climate](https://codeclimate.com/github/mfpiccolo/pliable.png)](https://codeclimate.com/github/mfpiccolo/pliable)
+| Dependencies            |  [![Dependency Status](https://gemnasium.com/mfpiccolo/pliable.png)](https://gemnasium.com/mfpiccolo/pliable)
 | Homepage                |  [http://mfpiccolo.github.io/pliable][homepage] |
 | Documentation           |  [http://rdoc.info/github/mfpiccolo/pliable/frames][documentation] |
 | Issues                  |  [https://github.com/mfpiccolo/pliable/issues][issues] |
