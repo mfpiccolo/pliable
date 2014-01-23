@@ -18,10 +18,10 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_runtime_dependency "rails",  ">= 4.0"
-  gem.add_runtime_dependency "pg"
+  gem.add_runtime_dependency "pg",     ">= 0.17"
 
   gem.add_development_dependency 'bundler', '~> 1.0'
-  gem.add_development_dependency 'rake', '~> 0.8'
+  gem.add_development_dependency 'rake', '>= 0.8'
   gem.add_development_dependency 'minitest', ">= 4.7.5"
   gem.add_development_dependency 'mocha',    "~> 1.0.0"
   gem.add_development_dependency 'pry',      "~> 0.9.12"
