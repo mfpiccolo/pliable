@@ -2,6 +2,7 @@ class CreatePliesAndPlyRelations < ActiveRecord::Migration
   def change
     create_table :plies do |t|
         t.integer  :user_id
+        t.string   :type
         t.string   :oid
         t.string   :otype
         t.json     :data

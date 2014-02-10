@@ -2217,3 +2217,43 @@ LINE 5:                WHERE a.attrelid = '"ply_relations"'::regclas...
   [1m[35m (0.5ms)[0m  SELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1  [["parent_id", 1]]
   [1m[36m (0.4ms)[0m  [1mSELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1[0m  [["child_id", 1]]
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (2.9ms)[0m  [1mALTER TABLE "plies" DISABLE TRIGGER ALL;ALTER TABLE "ply_relations" DISABLE TRIGGER ALL[0m
+  [1m[35m (10.1ms)[0m  select table_name from information_schema.views where table_schema = 'dummy_test'
+  [1m[36m (7.2ms)[0m  [1mTRUNCATE TABLE "plies", "ply_relations" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "plies" ENABLE TRIGGER ALL;ALTER TABLE "ply_relations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.6ms)[0m  INSERT INTO "ply_relations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00], ["updated_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00]]
+  [1m[36mPlyRelation Load (8.0ms)[0m  [1mSELECT "ply_relations".* FROM "ply_relations" WHERE "ply_relations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.6ms)[0m  INSERT INTO "plies" ("created_at", "data", "last_checked", "last_modified", "oid", "otype", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00], ["data", {"Id"=>"r@nd0m1d111", "IsDeleted"=>false, "Name"=>"INV-0000"}], ["last_checked", Sun, 19 Jan 2014 07:48:35 UTC +00:00], ["last_modified", Sun, 19 Jan 2014 07:48:35 UTC +00:00], ["oid", "r@nd0m1d000"], ["otype", "Invoice__c"], ["updated_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "plies" ("created_at", "data", "last_checked", "last_modified", "oid", "otype", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00], ["data", {"Id"=>"a01i0000007kDbrAAE", "IsDeleted"=>false, "Name"=>"i"}], ["last_checked", Sun, 19 Jan 2014 07:48:36 UTC +00:00], ["last_modified", Sun, 19 Jan 2014 07:48:36 UTC +00:00], ["oid", "a01i0000007kDbrAAE"], ["otype", "Line_Item__c"], ["updated_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "ply_relations" ("child_id", "child_type", "created_at", "parent_id", "parent_type", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["child_id", 2], ["child_type", "Line_Item__c"], ["created_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00], ["parent_id", 1], ["parent_type", "Invoice__c"], ["updated_at", Sat, 08 Feb 2014 06:39:28 UTC +00:00]]
+  [1m[36mInvoice Load (0.7ms)[0m  [1mSELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Invoice__c' ORDER BY "plies"."id" ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1  [["parent_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mSELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1[0m  [["child_id", 1]]
+  [1m[35mPliable::Ply Load (0.6ms)[0m  SELECT "plies".* FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1 AND "plies"."otype" = 'Line_Item__c' ORDER BY "plies"."id" ASC LIMIT 1  [["parent_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1[0m  [["parent_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1  [["child_id", 2]]
+  [1m[36mInvoice Load (0.3ms)[0m  [1mSELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Invoice__c'[0m
+  [1m[35m (0.3ms)[0m  SELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1  [["parent_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1[0m  [["child_id", 1]]
+  [1m[35mInvoice Load (18.1ms)[0m  SELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Invoice__c' AND "plies"."last_modified" = '2014-01-19 07:48:35'
+  [1m[36m (0.7ms)[0m  [1mSELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1[0m  [["parent_id", 1]]
+  [1m[35m (0.8ms)[0m  SELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1  [["child_id", 1]]
+  [1m[36mInvoice Load (0.3ms)[0m  [1mSELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Invoice__c' ORDER BY "plies"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1  [["parent_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1[0m  [["child_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plies"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plies" WHERE "plies"."otype" = 'Invoice__c'[0m
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Line_Item__c' ORDER BY "plies"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1[0m  [["parent_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1  [["child_id", 2]]
+  [1m[36mInvoice Load (0.4ms)[0m  [1mSELECT "plies".* FROM "plies" WHERE "plies"."otype" = 'Invoice__c' ORDER BY "plies"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT child_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."child_id" WHERE "ply_relations"."parent_id" = $1  [["parent_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT parent_type FROM "plies" INNER JOIN "ply_relations" ON "plies"."id" = "ply_relations"."parent_id" WHERE "ply_relations"."child_id" = $1[0m  [["child_id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK

@@ -2,7 +2,8 @@ require 'active_record'
 
 module Pliable
   class Ply < ActiveRecord::Base
-    # TODO move to Dummy
+
+    self.inheritance_column = 'ply_type'
 
     # Allows an ply to associate another ply as either a parent or child
     has_many :ply_relations
@@ -11,6 +12,8 @@ module Pliable
     has_many :child_relations, class_name: "PlyRelation", foreign_key: "parent_id"
     has_many :children, through: :child_relations, source: :child
 
+    before_save :set_type, if: lambda {|ply| ply.otype.present? }
+
     after_initialize :set_ply_attributes
     after_initialize :define_ply_scopes
 
@@ -18,6 +21,7 @@ module Pliable
       order('last_checked').first.last_checked
     end
 
+    # Active Record override
     def self.all
       if current_scope
         current_scope.clone
@@ -66,13 +70,13 @@ module Pliable
     def add_scopes(child_names, parent_names)
       child_names.each do |name|
         define_singleton_method(scrub_for_scope(name)) do
-          children.where(otype: name)
+          self.type.constantize.children.where(otype: name)
         end
       end
 
       parent_names.each do |name|
         define_singleton_method(scrub_for_scope(name)) do
-          parents.where(otype: name)
+          self.type.constantize.parents.where(otype: name)
         end
       end
     end
@@ -84,6 +88,14 @@ module Pliable
       end
 
       TextHelper.pluralize(name.downcase)
+    end
+
+    def set_type
+      if respond_to? :added_scrubber
+        self.ply_type = added_scrubber(self.otype)
+      else
+        self.ply_type = self.otype.gsub
+      end
     end
   end # Ply
 end # Pliable
