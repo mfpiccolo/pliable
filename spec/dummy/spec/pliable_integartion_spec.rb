@@ -43,6 +43,7 @@ describe Invoice do
       Invoice.first.should eq @invoice
       Ply.all.count.should be > Invoice.all.count
       LineItem.first.should_not eq Invoice.first
+      @invoice.line_items.first.class.name.should eq "LineItem"
     end
   end
 end

@@ -40,9 +40,18 @@ module Pliable
       define_singleton_method(:ply_type) { name }
     end
 
+    def child_ids
+      child_relations.map(&:child_id)
+    end
+
+    def parent_ids
+      parent_relations.map(&:parent_id)
+    end
+
     def to_param
       oid
     end
+
 
     private
 
@@ -66,13 +75,13 @@ module Pliable
     def add_scopes(child_names, parent_names)
       child_names.each do |name|
         define_singleton_method(scrub_for_scope(name)) do
-          children.where(otype: name)
+          scrub_to_constant(name).where(otype: name, id: child_ids)
         end
       end
 
       parent_names.each do |name|
         define_singleton_method(scrub_for_scope(name)) do
-          parents.where(otype: name)
+          scrub_to_constant(name).where(otype: name, id: parent_ids)
         end
       end
     end
@@ -84,6 +93,10 @@ module Pliable
       end
 
       TextHelper.pluralize(name.downcase)
+    end
+
+    def scrub_to_constant(name)
+      added_scrubber(name).gsub("_", "").constantize
     end
   end # Ply
 end # Pliable
