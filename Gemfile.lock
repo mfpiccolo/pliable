@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pliable (0.1.0)
+    pliable (0.2.0)
       pg (>= 0.17)
       rails (>= 4.0)
 
