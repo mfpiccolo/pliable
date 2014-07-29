@@ -11,8 +11,8 @@ module Pliable
     has_many :child_relations, class_name: "PlyRelation", foreign_key: "parent_id"
     has_many :children, through: :child_relations, source: :child
 
-    after_initialize :set_ply_attributes
-    after_initialize :define_ply_scopes
+    # after_initialize :set_ply_attributes
+    # after_initialize :define_ply_scopes
 
     def self.oldest_last_checked_time
       order('last_checked').first.last_checked
@@ -31,8 +31,7 @@ module Pliable
             scope = relation
           end
         end
-        scope.default_scoped = true
-        scope
+        default_scoped
       end
     end
 
@@ -99,4 +98,5 @@ module Pliable
       added_scrubber(name).gsub("_", "").constantize
     end
   end # Ply
+
 end # Pliable
