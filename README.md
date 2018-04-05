@@ -41,7 +41,7 @@ Pliable allows you to save individual records from external schemaless databases
 backed rails apps.  We store all of the data in a plies table.  The Ply model contains logic that allows
 you to inherit from Ply and then act as if these iherited models are normal Active Record models.
 
-Here is the Ply model your generator created by running `rails g pliable:models`:
+Here is the Ply model your generator created by running `rails g pliable:model`
 
 ```ruby
 class Ply < Pliable::Ply
